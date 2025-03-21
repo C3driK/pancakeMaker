@@ -53,9 +53,10 @@ const orderSummary = () => {
 };
 
 const confirmBtn = document.getElementById("confirmOrder");
-const orders = [];
 
 const confirmOrder = () => {
+  const orders = JSON.parse(localStorage.getItem("orders")) || [];
+
   const order = {
     id: Date.now(),
     customerName: document.getElementById("customerName").value,
@@ -71,12 +72,14 @@ const confirmOrder = () => {
     totalPrice: totalPrice,
     status: "waiting",
   };
-  orders.push(order);
-  console.log(orders);
+  if (order.customerName === "") {
+    alert("Please fill your name!");
+  } else {
+    orders.push(order);
 
-  localStorage.setItem("orders", JSON.stringify(orders));
+    localStorage.setItem("orders", JSON.stringify(orders));
+  }
 
-  
   //clean form for next order
   document.getElementById("customerName").value = "";
 };
