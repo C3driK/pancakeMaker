@@ -1,5 +1,5 @@
 body {
-  background-color: red;
+  background-color: #0a2342;
   color: #000000;
   display: flex;
   justify-content: center;
@@ -33,7 +33,7 @@ body {
   padding: 50px;
   min-height: 100vh;
   overflow-y: auto;
-  background-color: gold;
+  background-color: #e6aa68;
   margin: 15px;
   border-radius: 20px;
 }
@@ -65,4 +65,18 @@ select,
 label {
   display: block;
   margin-top: 10px;
+}
+
+/* .showOrdersPage{
+  position: relative;
+} */
+.showOrdersPage button {
+  position: absolute;
+  top: 80px;
+  right: 120px;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
 }

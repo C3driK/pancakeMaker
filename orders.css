@@ -1,16 +1,23 @@
 body {
-  background-color: yellow;
+  background-color: #e6aa68;
 }
 h1 {
   text-align: center;
   text-decoration: underline;
 }
 
+#ordersList {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
 section {
-  display: block;
   border: 2px solid black;
-  border-radius: 5px;
+  border-radius: 10px;
   margin: 10px;
+  background-color: whitesmoke;
+  padding: 5px;
+  width: 30%;
 }
 
 section p {
